@@ -1,0 +1,157 @@
+
+body h1{
+     text-align: center;  /* The text-align property specifies the horizontal alignment of text in an element */
+}
+
+body h1 span{
+     color:#B37C61   /* color property we use to give color to text  */
+}
+
+/* -------   main div css   --------- */
+.card{
+    display: flex;   /*  The flex property sets the flexible length on flexible items. */
+    flex-direction: row;    /*  The flex-direction property specifies the direction of the flexible items */
+    justify-content: center;
+    flex-wrap: wrap;    /* The flex-wrap property specifies whether the flexible items should wrap or not. */
+     width: 100%; 
+   
+}
+
+/* -------   card css   --------- */
+
+.card_info{
+    width: 25%;
+    margin: 15px;    
+    /* padding: 10px; */
+    text-align: center;
+    border-radius: 5px;    /*  This property allows you to add rounded corners to elements! */
+    background-color: lightgray;
+    box-shadow:2px 5px 4px 5px rgba(0,0,0,0.3);    /* The box-shadow property attaches one or more shadows to an element. */
+    transition: transform 2s;    /* The transition-property CSS property sets the CSS properties to which a transition effect should be applied. */
+
+}
+
+.card_title{
+    padding: 10px;    /*  The CSS padding properties are used to generate space around inside of any defined borders */
+    padding-top: 0;
+}
+
+
+.card_info h1{
+    text-align: left;
+    margin-top: 5px;
+}
+
+.card_info p{
+    text-align: justify;
+    margin-top: 10px;   /* The CSS margin properties are used to create space around elements ( margin-bottom, margin_left, margin_right)*/
+}
+
+.card_info h4{
+    text-align: left;
+    font-size: large;
+    margin-bottom: 5px;
+}
+
+.icons i{
+    margin:10px ;
+    color: rgb(17, 18, 19);
+}
+
+
+.card_info img{
+    width: 100%;      /* to give width the items */
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+    
+}
+
+/* -------   button  inside card --------- */
+
+button{
+    background-color: #2A2F44;     /*  The background-color property sets the background color of an element */
+    color: white;
+    margin-top: 5px;
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+/* -------   on hover   --------- */
+
+/* The :hover selector is used to select elements when you mouse over them */
+.card_info:hover {   
+    box-shadow: none;
+    background-color: #2A2F44;
+    color: #B37C61;
+    transform: scale(1.05);    /* The transform property applies a 2D or 3D transformation to an element */
+}
+
+.card_info:hover p {
+    color: white;
+}
+
+.card_info:hover h4 {
+    color: white;
+}
+
+.card_info:hover .icons i{
+    color: white;
+}
+
+.card_info:hover button{
+    background-color: #B37C61;
+}
+
+button:hover #btn{
+    background-color: lightgray;
+}
+
+.icons i:hover{
+   color: #B37C61;
+}
+
+
+
+
+/* -------   Media query   --------- */
+
+/* The @media rule is used in media queries to apply different styles for different media types/devices.
+ Media queries can be used to check many things, such as: 
+width and height of the viewport. width and height of the device. */
+
+@media (max-width:880px) {
+    .card_info h1{
+        font-size: 25px;
+    }
+    
+}
+
+@media (max-width:780px) {
+    .card_info h1{
+        font-size: 20px;
+    }
+    .card_info p{
+        font-size: 14px;
+    }
+    
+}
+
+@media (max-width:600px) {
+    .card_info{
+        width: 100%;
+        margin: 15px 10px;
+    }
+
+    .card_info h1{
+        font-size: 35px;
+    }
+
+    .card_info p{
+        font-size: 18px;
+    }
+    
+}
